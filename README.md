@@ -34,7 +34,10 @@ will be able to:
 Prerequisites -------------
 * You should be familiar with Ruby basics, for example by completing
   the Ruby Intro or Ruby Calisthenics assignment.
-* You should have read [ESaaS](http://www.saasbook.info) Chapter 2,
+* You should have read [ESaaS](http://www.s
+
+
+aasbook.info) Chapter 2,
   "The Architecture of SaaS Applications", and watched the
   accompanying videos in the [MOOC](http://www.saas-class.org).
 * You should be comfortable with basic Git usage and how to push your
