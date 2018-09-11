@@ -108,11 +108,11 @@ describe HangpersonGame do
     before :each do 
       @game = HangpersonGame.new('dog')
     end
-    it 'should be win when all letters guessed', :pending => false do
+    it 'should be win when all letters guessed', pending: false do
       guess_several_letters(@game, 'ogd')
       expect(@game.check_win_or_lose).to eq(:win)
     end
-    it 'should be lose after 7 incorrect guesses', :pending => false do
+    it 'should be lose after 7 incorrect guesses', pending: false do
       guess_several_letters(@game, 'tuvwxyz')
       expect(@game.check_win_or_lose).to eq(:lose)
     end
