@@ -31,6 +31,16 @@ class HangpersonGame
     @word.chars.map { |c| @guesses.include?(c) ? c : '-' }.join
   end
 
+  def check_win_or_lose
+    if @wrong_guesses.size > 6
+      :lose
+    elsif @guesses.chars.uniq.sort == @word.chars.uniq.sort
+      :win
+    else
+      :play
+    end
+  end
+
   def self.retrieve_random_word
     require 'uri'
     require 'net/http'

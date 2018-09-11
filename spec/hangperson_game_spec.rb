@@ -80,7 +80,7 @@ describe HangpersonGame do
       it 'throws an error when not a letter', :pending => false do
         expect { @game.guess('%') }.to raise_error(ArgumentError)
       end
-      it 'throws an error when nil', :pending => true do
+      it 'throws an error when nil', :pending => false do
         expect { @game.guess(nil) }.to raise_error(ArgumentError)
       end
     end
@@ -108,15 +108,15 @@ describe HangpersonGame do
     before :each do 
       @game = HangpersonGame.new('dog')
     end
-    it 'should be win when all letters guessed', :pending => true do
+    it 'should be win when all letters guessed', :pending => false do
       guess_several_letters(@game, 'ogd')
       expect(@game.check_win_or_lose).to eq(:win)
     end
-    it 'should be lose after 7 incorrect guesses', :pending => true do
+    it 'should be lose after 7 incorrect guesses', :pending => false do
       guess_several_letters(@game, 'tuvwxyz')
       expect(@game.check_win_or_lose).to eq(:lose)
     end
-    it 'should continue play if neither win nor lose', :pending => true do
+    it 'should continue play if neither win nor lose', :pending => false do
       guess_several_letters(@game, 'do')
       expect(@game.check_win_or_lose).to eq(:play)
     end
