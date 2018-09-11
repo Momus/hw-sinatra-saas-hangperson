@@ -39,4 +39,11 @@ RSpec.configure do |config|
   end
   config.color = true
   config.filter_run_excluding pending: true # this avoids excessive pending examples output
+  config.full_backtrace = false
+  config.backtrace_exclusion_patterns = [
+    /gems/,
+    /rspec/,
+    /bundle/
+  ]
+    
 end
