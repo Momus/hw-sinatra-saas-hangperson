@@ -1,0 +1,54 @@
+Your submission was recorded at 2018-09-12 20:55:24 +0000 : submission is on time.
+Score: 70/80
+
+Hangperson
+  game over
+    because the word is guessed [5 points] (FAILED - 1)
+    because the guess limit is reached [5 points] (FAILED - 2)
+  guessing
+    should reveal the letter if it is correct [5 points]
+    should reveal the letter if it appears many times [5 points]
+    should add to wrong guesses when incorrect [5 points]
+    should continuously track right and wrong guesses [5 points]
+    should treat guesses as case insensitive [5 points]
+  guessing repeats
+    should not count as wrong when correct [5 points]
+    should not uble count a repeated wrong guess [5 points]
+    should not count a repeated wrong guess towards losing [5 points]
+    should display an error message [5 points]
+  invalid guess
+    should label a non-letter as invalid [5 points]
+    should label a blank form as invalid [5 points]
+  starting a new game
+    should take me to the show page [5 points]
+  cheating
+    should not be able to fake a win [5 points]
+    should not be able to fake a loss [5 points]
+
+Failures:
+
+  1) Hangperson game over because the word is guessed [5 points]
+     Failure/Error: expect(current_route).to eq("/win")
+
+       expected: "/win"
+            got: "/show"
+
+       (compared using ==)
+
+  2) Hangperson game over because the guess limit is reached [5 points]
+     Failure/Error: expect(current_route).to eq("/lose")
+
+       expected: "/lose"
+            got: "/show"
+
+       (compared using ==)
+
+1 deprecation warning total
+
+Finished in 3.32 seconds (files took 317 minutes 33 seconds to load)
+16 examples, 2 failures
+
+Failed examples:
+
+rspec ./your_code.rb:74 # Hangperson game over because the word is guessed [5 points]
+rspec ./your_code.rb:79 # Hangperson game over because the guess limit is reached [5 points]
