@@ -69,13 +69,13 @@ class HangpersonApp < Sinatra::Base
     end
   end
 
-  # get '/win' do
-  #   ### YOUR CODE HERE ###
-  #   redirect '/show'
-  # end
+  get '/win' do
+    ### YOUR CODE HERE ###
+    redirect '/show'
+  end
 
-  # get '/lose' do
-  #   ### YOUR CODE HERE ###
-  #   redirect '/show'
-  # end
+  get '/lose' do
+    ### YOUR CODE HERE ###
+    redirect '/show'
+  end
 end

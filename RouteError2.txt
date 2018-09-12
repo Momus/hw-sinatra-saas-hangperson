@@ -1,0 +1,68 @@
+Your submission was recorded at 2018-09-12 21:15:38 +0000 : submission is on time.
+Score: 60/80
+
+Hangperson
+  game over
+    because the word is guessed [5 points] (FAILED - 1)
+    because the guess limit is reached [5 points] (FAILED - 2)
+  guessing
+    should reveal the letter if it is correct [5 points]
+    should reveal the letter if it appears many times [5 points]
+    should add to wrong guesses when incorrect [5 points]
+    should continuously track right and wrong guesses [5 points]
+    should treat guesses as case insensitive [5 points]
+  guessing repeats
+    should not count as wrong when correct [5 points]
+    should not uble count a repeated wrong guess [5 points]
+    should not count a repeated wrong guess towards losing [5 points]
+    should display an error message [5 points]
+  invalid guess
+    should label a non-letter as invalid [5 points]
+    should label a blank form as invalid [5 points]
+  starting a new game
+    should take me to the show page [5 points]
+  cheating
+    should not be able to fake a win [5 points] (FAILED - 3)
+    should not be able to fake a loss [5 points] (FAILED - 4)
+
+Failures:
+
+  1) Hangperson game over because the word is guessed [5 points]
+     Failure/Error: expect(current_route).to eq("/win")
+
+       expected: "/win"
+            got: "/show"
+
+       (compared using ==)
+
+  2) Hangperson game over because the guess limit is reached [5 points]
+     Failure/Error: expect(current_route).to eq("/lose")
+
+       expected: "/lose"
+            got: "/show"
+
+       (compared using ==)
+
+  3) Hangperson cheating should not be able to fake a win [5 points]
+     Failure/Error: @mech.get(@@BASE_URI + route)
+
+     Mechanize::ResponseCodeError:
+       404 => Net::HTTPNotFound for http://immense-ridge-33674.herokuapp.com/win -- unhandled response
+
+  4) Hangperson cheating should not be able to fake a loss [5 points]
+     Failure/Error: @mech.get(@@BASE_URI + route)
+
+     Mechanize::ResponseCodeError:
+       404 => Net::HTTPNotFound for http://immense-ridge-33674.herokuapp.com/lose -- unhandled response
+
+1 deprecation warning total
+
+Finished in 1.9 seconds (files took 337 minutes 51 seconds to load)
+16 examples, 4 failures
+
+Failed examples:
+
+rspec ./your_code.rb:74 # Hangperson game over because the word is guessed [5 points]
+rspec ./your_code.rb:79 # Hangperson game over because the guess limit is reached [5 points]
+rspec ./your_code.rb:175 # Hangperson cheating should not be able to fake a win [5 points]
+rspec ./your_code.rb:180 # Hangperson cheating should not be able to fake a loss [5 points]
